@@ -1,0 +1,65 @@
+doctype
+html(lang='es')
+	//-include includes/head.pug
+	head
+		link(rel="preload" href="css/styles.min.css" as="style")
+		meta(charset='utf-8')
+		link(rel="shortcut icon" href="img/logo.png" type="image/x-icon")
+		title OXXO 
+		link(rel="stylesheet" href="css/bootstrap.min.css") 
+		link(rel="stylesheet" href="css/styles.min.css") 
+		script(src="js/jquery-3.4.1.min.js") 
+		script(src="js/bootstrap.min.js") 
+
+		script(src="js/scripts.min.js") 
+
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+		body 
+			main.homeNino
+				#particles-js.particulas
+				#particles-js2.particulas
+				#particles-js3.particulas
+				#particles-js4.particulas
+
+				section.homeNino--hero
+					.container-fluid
+						.row
+							.col-12
+								picture 
+									source(media="(min-width: 992px)" srcset="../img/STOREFRONT-1920x500.jpg")
+									img.img-fluid(src="../img/STOREFRONT-544X440.jpg" alt="")
+
+				section.homeNino--content 
+					img.img-fluid.helados(src="../img/HELADO-min.png" alt="")
+					img.img-fluid.helados(src="../img/HELADO-min.png" alt="")
+
+					.container
+						.row 
+							.col-12 
+								h1 
+									b Feliz Día del Niño a chicos y grande 
+								h2 
+									i Festejemos con estos dulces y divertidos cupones 
+								img.img-fluid#title(src="../img/title.png", alt="")
+				
+				section.homeNino--cupones
+					.container
+						.row
+							.col-lg-4.d-flex.justify-content-center
+								a(href="#!", target="_blank", rel="noopener noreferrer", id= "link"+n++) 
+									img.img-fluid(src="../img/cupon.png", alt="")
+							
+							.col-lg-4.d-flex.justify-content-center
+								a(href="#!", target="_blank", rel="noopener noreferrer", id= "link"+n++) 
+									img.img-fluid(src="../img/cupon.png", alt="")
+							
+							.col-lg-4.d-flex.justify-content-center
+								a(href="#!", target="_blank", rel="noopener noreferrer", id= "link"+n++) 
+									img.img-fluid(src="../img/cupon.png", alt="")
+						
+							
+
+
+		script(src="js/particles.min.js") 
+		script(src="js/app.js") 

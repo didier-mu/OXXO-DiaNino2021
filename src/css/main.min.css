@@ -1,0 +1,467 @@
+:root {
+  --gris: #343434;
+  --negro: #000000;
+  --blanco: #FFFFFF;
+  --primario: #33295D;
+  --secundario: #DD2826;
+  --tercero: #AF0300;
+  --primariaRegular: 'Conv_Druk Wide Bold';
+  --primariaBold: 'Conv_Druk Wide Bold';
+  --secundariaRegular: 'centuryRegular';
+  --secundariaBold: 'centuryBold';
+  --h1: calc(40px + 10 * ((100vw - 1280px) / 1920));
+  --h2: calc(32px + 10 * ((100vw - 1280px) / 1920));
+  --h3: calc(26px + 10 * ((100vw - 1280px) / 1920));
+  --h4: calc(22px + 10 * ((100vw - 1280px) / 1920));
+  --h5: calc(16px + 10 * ((100vw - 1280px) / 1920));
+  --h6: calc(12px + 10 * ((100vw - 1280px) / 1920));
+}
+
+.module {
+  height: 100vh;
+  height: calc(var(--vh,1vh) * 100);
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.module__item {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:991px) {
+  .drawer-open {
+    overflow: hidden!important;
+  }
+
+  .offcanvas-inner {
+    position: relative;
+    left: 0;
+    transition: left .25s ease-out;
+  }
+
+  .offcanvas-content-left,
+  .offcanvas-drawer-left {
+    left: -225px;
+  }
+
+  .active-left .offcanvas-content-left,
+  .active-left .offcanvas-drawer-left {
+    left: 0;
+  }
+
+  .active-left .navbar-fixed-top,
+  .active-left .offcanvas-inner {
+    left: 225px;
+  }
+
+  .offcanvas-content-right,
+  .offcanvas-drawer-right {
+    right: -225px;
+  }
+
+  .active-right .offcanvas-content-right,
+  .active-right .offcanvas-drawer-right {
+    right: 0;
+  }
+
+  .active-right .navbar-fixed-top,
+  .active-right .offcanvas-inner {
+    left: -225px;
+  }
+
+  .drawer-open .navbar-fixed-top {
+    width: 100%;
+    transition: left .25s ease-out;
+  }
+
+  .offcanvas-content-left,
+  .offcanvas-content-right,
+  .offcanvas-drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 225px;
+    z-index: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: all .25s ease-out;
+  }
+
+  .offcanvas-close-btn {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    z-index: 1031;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+  }
+
+  .active-left .offcanvas-close-btn {
+    right: 0;
+    display: block;
+  }
+
+  .active-right .offcanvas-close-btn {
+    left: 0;
+    display: block;
+  }
+
+  .drawer-open .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #428bca;
+  }
+
+  .offcanvas-content-left,
+  .offcanvas-content-right,
+  .offcanvas-drawer {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .offcanvas-drawer .navbar-nav {
+    margin: 0;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  }
+
+  .offcanvas-drawer .navbar-nav li {
+    border-top: 1px solid rgba(255,255,255,.05);
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  .offcanvas-drawer .navbar-nav li a {
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px;
+  }
+
+  .offcanvas-drawer .navbar-nav li a:hover {
+    background-color: rgba(0,0,0,.2);
+  }
+
+  .offcanvas-drawer .navbar-nav h3 {
+    margin: 0;
+    background-color: #333;
+    color: #888;
+    border-top: 1px solid rgba(255,255,255,.1);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 6px 15px;
+  }
+
+  .offcanvas-drawer .navbar-nav .glyphicon {
+    color: #444;
+    margin-right: 5px;
+  }
+}
+
+body,
+body main {
+  overflow-x: hidden!important;
+  position: relative;
+}
+
+body main a,
+body main h1,
+body main h2,
+body main h3,
+body main h4,
+body main h5,
+body main h6,
+body main label {
+  line-height: 1.3;
+  margin-bottom: 0;
+  text-transform: none;
+  font-weight: 400;
+}
+
+body main a b,
+body main h1 b,
+body main h2 b,
+body main h3 b,
+body main h4 b,
+body main h5 b,
+body main h6 b,
+body main label b {
+  font-weight: 700;
+}
+
+body main h1 {
+  font-size: var(--h1);
+  line-height: 1.2;
+}
+
+body main h2 {
+  font-size: var(--h1);
+}
+
+body main h3 {
+  font-size: var(--h3);
+}
+
+body main h4 {
+  font-size: var(--h4);
+}
+
+body main h5 {
+  font-size: var(--h5);
+  line-height: 1.5;
+}
+
+body main h6 {
+  font-size: var(--h6);
+  line-height: 1.5;
+}
+
+body .checkboxes span,
+body .combo select {
+  font-size: calc(14px + 5 * ((100vw - 320px)/ 768));
+}
+
+body .combo {
+  background: #fff;
+  border: 3px solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+body .combo select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last: center;
+  height: 50px;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 50px;
+  background: url("../img/iconCombo.webp") 95% center/11px no-repeat #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+body .combo select:focus {
+  outline: 0;
+}
+
+body .checkboxes {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+body .checkboxes input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+body .checkboxes input:checked~.checkmark {
+  background-color: #fff;
+}
+
+body .checkboxes input:checked~.checkmark:after {
+  display: block;
+}
+
+body .checkboxes span {
+  width: 83%;
+}
+
+body .checkboxes span a {
+  text-decoration: underline;
+}
+
+body .checkboxes .checkmark {
+  height: 26px;
+  width: 25px;
+  border-radius: 5px;
+  border: 2px solid;
+  margin-right: 10px;
+}
+
+body .checkboxes .checkmark:after {
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 7px;
+  height: 10px;
+  border: solid;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+body input[type=button] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: 0;
+  width: 100%;
+  opacity: 1;
+  min-height: 46px;
+  font-size: 20px;
+  margin: 20px auto;
+  color: #fff;
+  border-radius: 50px;
+  transition: .3s ease-in-out all;
+}
+
+body input[type=button]:disabled {
+  color: #ccc;
+}
+
+body input[type=button]:focus {
+  outline: 0;
+}
+
+body input[type=button]:hover {
+  background: #fff;
+  border: 1px solid;
+}
+
+body .error-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+body .modal {
+  z-index: 9999;
+}
+
+body .modal .closeModal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 20px;
+}
+
+body .modal .closeModal img {
+  width: 100%;
+  max-width: 20px;
+}
+
+body .homeNino {
+  min-height: 600px;
+}
+
+body .homeNino .particulas {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: none!important;
+  background-color: transparent!important;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+body .homeNino--hero .container-fluid {
+  padding: 0;
+}
+
+body .homeNino--content {
+  padding: 100px 0 50px;
+  position: relative;
+}
+
+body .homeNino--content .helados {
+  position: absolute;
+  max-width: 220px;
+}
+
+body .homeNino--content .helados:first-of-type {
+  left: 60px;
+  transform: rotateY(180deg);
+  width: 12%;
+}
+
+body .homeNino--content .helados:last-of-type {
+  right: 30px;
+  width: 100%;
+  bottom: 0;
+}
+
+body .homeNino--content h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+body .homeNino--content h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+body .homeNino--content #title {
+  margin: 20px auto 0;
+  display: block;
+}
+
+body .homeNino--cupones {
+  padding: 50px 15px;
+}
+
+@media (max-width:992px) {
+  :root {
+    --h1: calc(32px + 10 * ((100vw - 320px) / 1280));
+    --h2: calc(26px + 10 * ((100vw - 320px) / 1280));
+    --h3: calc(20px + 10 * ((100vw - 320px) / 1280));
+    --h4: calc(16px + 10 * ((100vw - 320px) / 1280));
+    --h5: calc(14px + 10 * ((100vw - 320px) / 1280));
+    --h6: calc(12px + 10 * ((100vw - 320px) / 1280));
+  }
+
+  body .homeNino--content {
+    padding: 50px 0;
+  }
+
+  body .homeNino--content .helados {
+    max-width: 220px;
+    display: none;
+  }
+
+  body .homeNino--content .helados:first-of-type {
+    left: 0;
+    width: 30%;
+  }
+
+  body .homeNino--content .helados:last-of-type {
+    right: 0;
+    width: 30%;
+  }
+
+  body .homeNino--cupones {
+    padding-top: 20px;
+  }
+
+  body .homeNino--cupones .d-flex {
+    margin-bottom: 30px;
+  }
+}
