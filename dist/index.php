@@ -22,18 +22,18 @@
             <div class="row">
               <div class="col-12">
                 <picture> 
-                  <source media="(min-width: 992px)" srcset="../img/STOREFRONT-1920x500.jpg"><img src="../img/STOREFRONT-544X440.jpg" alt="" class="img-fluid">
+                  <source media="(min-width: 992px)" srcset="img/STOREFRONT-1920x500.jpg"><img src="img/STOREFRONT-544X440.jpg" alt="" class="img-fluid">
                 </picture>
               </div>
             </div>
           </div>
         </section>
-        <section class="homeNino--content"> <img src="../img/HELADO-min.png" alt="" class="img-fluid helados"><img src="../img/HELADO-min.png" alt="" class="img-fluid helados">
+        <section class="homeNino--content"> <img src="img/HELADO-min.png" alt="" class="img-fluid helados"><img src="img/HELADO-min.png" alt="" class="img-fluid helados">
           <div class="container">
             <div class="row"> 
               <div class="col-12"> 
                 <h1> <b>Feliz Día del Niño a chicos y grande </b></h1>
-                <h2> <i>Festejemos con estos dulces y divertidos cupones </i></h2><img id="title" src="../img/title.png" alt="" class="img-fluid">
+                <h2> <i>Festejemos con estos dulces y divertidos cupones </i></h2><img id="title" src="img/title.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -41,9 +41,9 @@
         <section class="homeNino--cupones">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="../img/cupon.png" alt="" class="img-fluid"></a></div>
-              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="../img/cupon.png" alt="" class="img-fluid"></a></div>
-              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="../img/cupon.png" alt="" class="img-fluid"></a></div>
+              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="img/cupon.png" alt="" class="img-fluid"></a></div>
+              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="img/cupon.png" alt="" class="img-fluid"></a></div>
+              <div class="col-lg-4 d-flex justify-content-center"><a href="#!" target="_blank" rel="noopener noreferrer" id="linkNaN"> <img src="img/cupon.png" alt="" class="img-fluid"></a></div>
             </div>
           </div>
         </section>
